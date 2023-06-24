@@ -13,3 +13,15 @@
     apt:
      name: git
      state: present
+  
+  - name: i want to install webserver on redhat machine
+    dnf:
+     name: httpd
+     state: present
+    when: ansible_os_family == "RedHat"
+
+  - name: i want to start webserver on RedHat machine
+    service:
+     name: hhtpd
+     state: started
+    when: ansible_os_family == "RedHat"
