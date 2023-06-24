@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+  - name: i want to ping
+    ping:
+
+  - name: i want to install apache2
+    apt:
+     name: apache2
+     state: present
+
+  - name: i wnat to install git
+    apt:
+     name: git
+     state: present
