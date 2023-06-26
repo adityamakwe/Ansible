@@ -1,5 +1,7 @@
 ---
-- hosts: all
+- hosts: webserver
+  become: yes
+  gather_fact: yes
   tasks:
   - name: i want to ping
     ping:
